@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     
     <title>Home</title>
-    <link rel="stylesheet" href="../styles/homepage.css">
+    <link rel="stylesheet" href="homepage.css">
     <link href="favicon.png" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
     <div id="search">
-        <input id="search-field" type="text" name="search-field"/>
+        <input id="search-field" type="text" name="search-field" placeholder="Search DuckDuckGo"/>
     </div>
     <div class="container">
         <div id="clock"></div>
@@ -27,11 +27,13 @@
                 <div class="bookmark-title">Work</div>
                 <div class="bookmark-inner-container">
                     <a class="bookmark"
-                        href="https://www.chrisoldmeadow.xyz/" target="_blank">chrisoldmeadow.xyz</a>
+                       href="https://www.chrisoldmeadow.xyz/" target="_blank">chrisoldmeadow.xyz</a>
                     <a class="bookmark" href="https://www.office.com/" target="_blank">Office 365</a>
                     <a class="bookmark" href="https://jira.hmri.org.au/" target="_blank">Jira</a>
                     <a class="bookmark" href="https://www.trello.com/" target="_blank">Trello</a>
                     <a class="bookmark" href="https://git.hmri.org.au/" target="_blank">Gitea - HMRI</a>
+                    <a class="bookmark" href="https://searx.chrisoldmeadow.xyz/"
+                        target="_blank">Searx</a>
                 </div>
             </div>
             <div class="bookmark-set">
@@ -67,7 +69,7 @@
                 </div>
             </div>
             <div class="bookmark-set">
-            <div class="bookmark-title">Reddit</div>
+                <div class="bookmark-title">Reddit</div>
                 <div class="bookmark-inner-container">
                     <a class="bookmark" href="https://reddit.com/r/linux" target="_blank">/r/linux</a>
                     <a class="bookmark" href="https://reddit.com/r/archlinux" target="_blank">/r/archlinux</a>
@@ -89,7 +91,7 @@
         document.getElementById("search-field").addEventListener("keydown",  event => { 
             if (event.keyCode === 13) {
                 var val = document.getElementById("search-field").value;
-                window.open("https://google.com/search?q=" + val);
+                window.open("https://duckduckgo.com/?q=" + val);
             }
         });
         // Get current time and format
